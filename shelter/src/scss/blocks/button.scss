@@ -1,7 +1,7 @@
 .button {
   text-align: center;
-  border: none;
   outline: none;
+  border: none;
   appearance: none;
   border-radius: 100px;
   display: flex;
@@ -31,31 +31,46 @@
 }
 @mixin button_secondary {
   border: 2px solid $color-primory;
+  width: 187px;
   font-size: 17px;
   line-height: 22px;
-  padding: 15px 45px;
+  padding: 15px;
 }
 @mixin button_pagination {
   width: 52px;
   border: 2px solid $color-primory;
   font-size: 20px;
   line-height: 23px;
-  &.active {
-    background-color: $color-primory;
+  padding-bottom: 3px;
+  &:hover {
+    border: none;
   }
-  &.inactive {
+  &_active {
+    font-size: 20px;
+    line-height: 23px;
+    background-color: $color-primory;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+  &_inactive {
+    font-size: 20px;
+    line-height: 23px;
     color: $color-dark-s;
     border: 2px solid $color-dark-s;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 @mixin button_arrow {
   width: 52px;
   border: 2px solid $color-primory;
   background: url("../assets/icons/arrow.svg") no-repeat center;
-  // &.inactive {
-  //   border: 2px solid $color-dark-s;
-  //   background: url("../assets/icons/arrow-inactive.svg") no-repeat center;
-  // }
+  &_inactive {
+    border: 2px solid $color-dark-s;
+    background: url("../assets/icons/arrow-inactive.svg") no-repeat center;
+  }
 }
 @mixin button_close {
   width: 52px;

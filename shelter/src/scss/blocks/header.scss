@@ -1,10 +1,9 @@
 .header {
   height: 60px;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   .logo {
     display: flex;
     flex-direction: column;
@@ -14,8 +13,25 @@
 
     &__title {
       margin: 0;
+      font-family: Georgia;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 35px;
+      letter-spacing: 0.06em;
+      color: $color-primory;
+    }
+    &__subtitle {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+      color: $color-light-xl;
     }
   }
+
   .navbar {
     padding: 16px 0 20px 0;
     &__list {
@@ -28,7 +44,7 @@
     }
     &__link_active {
       align-items: center;
-      color: $color-dark-s;
+      color: $color-light-s;
       text-decoration: none;
       padding-bottom: 3px;
       border-bottom: 3px solid $color-primory;
@@ -37,10 +53,34 @@
       align-items: center;
       color: $color-dark-s;
       text-decoration: none;
+      &:hover {
+        color: $color-light-s;
+      }
       &:active {
         padding-bottom: 3px;
         border-bottom: 3px solid $color-primory;
       }
+    }
+  }
+}
+@mixin dark_theme {
+  .logo {
+    &__title {
+      color: $color-dark-l;
+    }
+    &__subtitle {
+      color: $color-dark-3xl;
+    }
+  }
+  .navbar {
+    &__link {
+      color: $color-dark-l;
+      &:hover {
+        color: $color-dark-3xl;
+      }
+    }
+    &__link_active {
+      color: $color-dark-3xl;
     }
   }
 }

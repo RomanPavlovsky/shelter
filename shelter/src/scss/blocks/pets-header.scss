@@ -1,0 +1,14 @@
+.pets-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-xl;
+  width: 100vw;
+}
+.pets-header__wrapper {
+  min-width: 1280px;
+  padding: 30px 40px;
+}
+.pets-header__container {
+  @include dark_theme;
+}

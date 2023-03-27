@@ -1,0 +1,52 @@
+.pets-our-friends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $color-light-l;
+  &__wrapper {
+    width: 1280px;
+    padding: 0 40px;
+  }
+  &__container {
+    padding: 80px 0 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 45px;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    width: 400px;
+  }
+  &__grid {
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    &__prev-full {
+      @include button_pagination;
+    }
+    &__prev {
+      @include button_pagination;
+    }
+    &__page {
+      @include button_pagination;
+    }
+    &__next {
+      @include button_pagination;
+    }
+    &__next-full {
+      @include button_pagination;
+    }
+  }
+}

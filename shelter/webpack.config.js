@@ -13,10 +13,15 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
+      template: path.resolve(__dirname, "src/pages", "main.html"),
       filename: "index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src/pages", "pets.html"),
+      filename: "pets.html",
+    }),
     new MiniCssExtractPlugin({
+      // template: path.resolve(__dirname, "src/scss", "main.scss"),
       filename: "[name].[contenthash].css",
     }),
   ],
@@ -42,21 +47,6 @@ module.exports = {
           "css-loader",
           "postcss-loader",
           "sass-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    "postcss-preset-env",
-                    {
-                      browsers: "last 2 versions",
-                    },
-                  ],
-                ],
-              },
-            },
-          },
         ],
       },
       {

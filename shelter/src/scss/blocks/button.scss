@@ -1,0 +1,64 @@
+.button {
+  text-align: center;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 52px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  color: $color-dark-3xl;
+  background-color: transparent;
+  &:hover {
+    border: none;
+    cursor: pointer;
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin button_primary {
+  font-size: 17px;
+  line-height: 22px;
+  padding: 15px 45px;
+  background-color: $color-primory;
+}
+@mixin button_secondary {
+  border: 2px solid $color-primory;
+  font-size: 17px;
+  line-height: 22px;
+  padding: 15px 45px;
+}
+@mixin button_pagination {
+  width: 52px;
+  border: 2px solid $color-primory;
+  font-size: 20px;
+  line-height: 23px;
+  &.active {
+    background-color: $color-primory;
+  }
+  &.inactive {
+    color: $color-dark-s;
+    border: 2px solid $color-dark-s;
+  }
+}
+@mixin button_arrow {
+  width: 52px;
+  border: 2px solid $color-primory;
+  background: url("../assets/icons/arrow.svg") no-repeat center;
+  // &.inactive {
+  //   border: 2px solid $color-dark-s;
+  //   background: url("../assets/icons/arrow-inactive.svg") no-repeat center;
+  // }
+}
+@mixin button_close {
+  width: 52px;
+  border: 2px solid $color-primory;
+  background: url("../assets/icons/vector.svg") no-repeat center;
+}

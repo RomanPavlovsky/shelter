@@ -1,0 +1,89 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: url("../assets/images/noise_transparent@2X.png"),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  &__wrapper {
+    width: 1280px;
+    padding: 40px 40px 0 40px;
+  }
+  &__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__background-image {
+    width: 300px;
+    height: 310px;
+    background-image: url("../assets/images/footer-puppy.png");
+  }
+
+  .contacts {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &__heading {
+      color: $color-light-xl;
+    }
+    &__mail {
+      display: flex;
+      column-gap: 20px;
+    }
+    &__email-address {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-primory;
+    }
+    &__phone {
+      display: flex;
+      column-gap: 20px;
+    }
+    &__phone-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-primory;
+    }
+  }
+  .location {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      color: $color-light-xl;
+    }
+    &__boston {
+      margin-top: 34px;
+      display: flex;
+      column-gap: 20px;
+    }
+    &__boston-address {
+      width: 260px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $color-primory;
+    }
+    &__london {
+      margin-top: 32px;
+      display: flex;
+      column-gap: 20px;
+    }
+    &__london-address {
+      width: 260px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $color-primory;
+    }
+  }
+}

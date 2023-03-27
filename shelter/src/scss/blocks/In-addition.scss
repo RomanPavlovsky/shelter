@@ -1,0 +1,47 @@
+.in-adition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: $color-light-l;
+  &__wrapper {
+    width: 1280px;
+    padding: 80px 40px 100px 40px;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 30px;
+  }
+  &__background-image {
+    width: 505px;
+    height: 261px;
+    background-image: url("../assets/images/donation-dog.png");
+  }
+  &__content {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+  &__heading {
+    display: flex;
+    margin-right: 80px;
+  }
+  .credit-card {
+    padding: 10px 15px;
+    border-radius: 9px;
+    background-color: $color-primory;
+    &__content {
+      display: flex;
+      column-gap: 15px;
+    }
+    &__icon {
+      display: block;
+    }
+  }
+}

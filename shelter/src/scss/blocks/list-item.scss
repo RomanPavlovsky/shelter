@@ -1,0 +1,12 @@
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  &__image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,46 @@
+.header {
+  height: 60px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+
+    &__title {
+      margin: 0;
+    }
+  }
+  .navbar {
+    padding: 16px 0 20px 0;
+    &__list {
+      width: 442px;
+      display: flex;
+      column-gap: 35px;
+    }
+    &__item {
+      list-style-type: none;
+    }
+    &__link_active {
+      align-items: center;
+      color: $color-dark-s;
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 3px solid $color-primory;
+    }
+    &__link {
+      align-items: center;
+      color: $color-dark-s;
+      text-decoration: none;
+      &:active {
+        padding-bottom: 3px;
+        border-bottom: 3px solid $color-primory;
+      }
+    }
+  }
+}

@@ -33,6 +33,7 @@
       color: $color-light-xl;
     }
     &__mail {
+      text-decoration: none;
       display: flex;
       column-gap: 20px;
     }
@@ -43,6 +44,7 @@
       color: $color-primory;
     }
     &__phone {
+      text-decoration: none;
       display: flex;
       column-gap: 20px;
     }
@@ -62,6 +64,7 @@
       color: $color-light-xl;
     }
     &__boston {
+      text-decoration: none;
       margin-top: 34px;
       display: flex;
       column-gap: 20px;
@@ -74,6 +77,7 @@
       color: $color-primory;
     }
     &__london {
+      text-decoration: none;
       margin-top: 32px;
       display: flex;
       column-gap: 20px;

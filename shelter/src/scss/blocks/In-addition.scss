@@ -37,6 +37,7 @@
     border-radius: 9px;
     background-color: $color-primory;
     &__content {
+      text-decoration: none;
       display: flex;
       column-gap: 15px;
     }

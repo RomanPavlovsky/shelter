@@ -17,8 +17,8 @@
   letter-spacing: 0.06rem;
   color: $color-dark-3xl;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    border: none;
     cursor: pointer;
     background-color: $color-primary-light;
   }
@@ -36,6 +36,9 @@
   font-size: 17px;
   line-height: 22px;
   padding: 15px;
+  &:hover {
+    border: 2px solid $color-primary-light;
+  }
 }
 @mixin button_pagination {
   width: 52px;
@@ -44,11 +47,12 @@
   line-height: 23px;
   padding-bottom: 3px;
   &:hover {
-    border: none;
+    border: 2px solid $color-primary-light;
   }
   &_active {
     font-size: 20px;
     line-height: 23px;
+    padding-bottom: 3px;
     background-color: $color-primory;
     &:hover {
       background-color: $color-primary-light;
@@ -57,6 +61,7 @@
   &_inactive {
     font-size: 20px;
     line-height: 23px;
+    padding-bottom: 3px;
     color: $color-dark-s;
     border: 2px solid $color-dark-s;
     &:hover {
@@ -68,6 +73,9 @@
   width: 52px;
   border: 2px solid $color-primory;
   background: url("../assets/icons/arrow.svg") no-repeat center;
+  &:hover {
+    border: 2px solid $color-primary-light;
+  }
   &_inactive {
     border: 2px solid $color-dark-s;
     background: url("../assets/icons/arrow-inactive.svg") no-repeat center;

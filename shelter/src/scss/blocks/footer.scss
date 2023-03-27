@@ -36,6 +36,10 @@
       text-decoration: none;
       display: flex;
       column-gap: 20px;
+      &:hover .contacts__email-address {
+        color: $color-primary-light;
+        transition: all 0.15s ease-in-out;
+      }
     }
     &__email-address {
       display: flex;
@@ -47,6 +51,10 @@
       text-decoration: none;
       display: flex;
       column-gap: 20px;
+      &:hover .contacts__phone-number {
+        color: $color-primary-light;
+        transition: all 0.15s ease-in-out;
+      }
     }
     &__phone-number {
       display: flex;
@@ -68,6 +76,10 @@
       margin-top: 34px;
       display: flex;
       column-gap: 20px;
+      &:hover .location__boston-address {
+        color: $color-primary-light;
+        transition: all 0.15s ease-in-out;
+      }
     }
     &__boston-address {
       width: 260px;
@@ -81,6 +93,10 @@
       margin-top: 32px;
       display: flex;
       column-gap: 20px;
+      &:hover .location__london-address {
+        color: $color-primary-light;
+        transition: all 0.15s ease-in-out;
+      }
     }
     &__london-address {
       width: 260px;

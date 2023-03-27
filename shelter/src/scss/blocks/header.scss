@@ -11,7 +11,10 @@
     justify-content: center;
     align-items: center;
     row-gap: 10px;
-
+    &:hover .logo__title {
+      color: $color-primary-light;
+      transition: all 0.2s ease-in-out;
+    }
     &__title {
       margin: 0;
       font-family: Georgia;
@@ -54,6 +57,7 @@
       align-items: center;
       color: $color-dark-s;
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
       &:hover {
         color: $color-light-s;
       }
@@ -66,6 +70,10 @@
 }
 @mixin dark_theme {
   .logo {
+    &:hover .logo__title {
+      color: $color-dark-3xl;
+      transition: all 0.2s ease-in-out;
+    }
     &__title {
       color: $color-dark-l;
     }

@@ -36,6 +36,10 @@
     padding: 10px 15px;
     border-radius: 9px;
     background-color: $color-primory;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-primary-light;
+    }
     &__content {
       text-decoration: none;
       display: flex;

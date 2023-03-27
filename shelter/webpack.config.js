@@ -21,7 +21,6 @@ module.exports = {
       filename: "pets.html",
     }),
     new MiniCssExtractPlugin({
-      // template: path.resolve(__dirname, "src/scss", "main.scss"),
       filename: "[name].[contenthash].css",
     }),
   ],

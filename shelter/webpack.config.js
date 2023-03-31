@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -8,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.[contenthash].js",
     assetModuleFilename: "assets/[hash][ext][query]",
-    clean: true,
+    clean: false,
   },
 
   plugins: [
@@ -22,6 +23,13 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
+    }),
+    new FileManagerPlugin({
+      events: {
+        onStart: {
+          delete: ["dist"],
+        },
+      },
     }),
   ],
   devServer: {

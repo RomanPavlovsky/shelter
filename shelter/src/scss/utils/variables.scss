@@ -1,3 +1,4 @@
+// colors
 $color-dark-l: #545454;
 $color-dark-xl: #4c4c4c;
 $color-dark-2xl: #444444;
@@ -9,3 +10,11 @@ $color-light-l: #f6f6f6;
 $color-light-xl: #ffffff;
 $color-primory: #f1cdb3;
 $color-primary-light: #fddcc4;
+
+$transition: all 0.2s ease-in-out;
+
+//breakpoints
+$breakpoint_xl: 1200px;
+$breakpoint_lg: 992px;
+$breakpoin_md: 768px;
+$breakpoint_sm: 576px;

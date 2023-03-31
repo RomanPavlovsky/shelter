@@ -1,0 +1,30 @@
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  column-gap: 90px;
+  @include desktop {
+    @include responsiveDesktop(column-gap, 90, 40);
+  }
+
+  &__card_three {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__button_prev {
+    position: absolute;
+    left: 0;
+    @include button_arrow;
+  }
+  &__button_next {
+    position: absolute;
+    right: 0;
+    @include button_arrow;
+    transform: rotate(180deg);
+    order: 5;
+  }
+}

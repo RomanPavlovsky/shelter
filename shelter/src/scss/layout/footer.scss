@@ -7,24 +7,38 @@
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
   &__wrapper {
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     padding: 40px 40px 0 40px;
+    @include tablet {
+      @include responsiveTablet(padding-left, 40, 30);
+      @include responsiveTablet(padding-right, 40, 30);
+      @include responsiveTablet(padding-top, 40, 30);
+    }
   }
   &__container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    @include desktop {
+      flex-direction: column;
+      row-gap: 65px;
+    }
   }
-
+  &__content {
+    display: flex;
+    column-gap: 160px;
+    @include tablet {
+      @include responsiveTablet(column-gap, 160, 60);
+    }
+  }
   &__background-image {
-    width: 300px;
-    height: 310px;
-    background-image: url("../assets/images/footer-puppy.png");
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
-
   .contacts {
-    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -38,7 +52,7 @@
       column-gap: 20px;
       &:hover .contacts__email-address {
         color: $color-primary-light;
-        transition: all 0.15s ease-in-out;
+        transition: $transition;
       }
     }
     &__email-address {
@@ -53,7 +67,7 @@
       column-gap: 20px;
       &:hover .contacts__phone-number {
         color: $color-primary-light;
-        transition: all 0.15s ease-in-out;
+        transition: $transition;
       }
     }
     &__phone-number {
@@ -64,7 +78,6 @@
     }
   }
   .location {
-    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
 
@@ -78,7 +91,7 @@
       column-gap: 20px;
       &:hover .location__boston-address {
         color: $color-primary-light;
-        transition: all 0.15s ease-in-out;
+        transition: $transition;
       }
     }
     &__boston-address {
@@ -95,7 +108,7 @@
       column-gap: 20px;
       &:hover .location__london-address {
         color: $color-primary-light;
-        transition: all 0.15s ease-in-out;
+        transition: $transition;
       }
     }
     &__london-address {

@@ -10,5 +10,5 @@
   padding: 30px 40px;
 }
 .pets-header__container {
-  @include dark_theme;
+  @include pets-header;
 }

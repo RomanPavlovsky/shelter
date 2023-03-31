@@ -14,10 +14,10 @@
   font-family: Georgia;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
   color: $color-dark-3xl;
   background-color: transparent;
-  transition: all 0.2s ease-in-out;
+  transition: $transition;
   &:hover {
     cursor: pointer;
     background-color: $color-primary-light;

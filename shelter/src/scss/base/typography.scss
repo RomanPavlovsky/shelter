@@ -2,7 +2,7 @@ h2 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 57px;
   color: $color-dark-l;
 }
@@ -10,7 +10,7 @@ h3 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 3.5rem;
   line-height: 45px;
   color: $color-dark-l;
   letter-spacing: 0.06em;
@@ -19,7 +19,7 @@ h4 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 23px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
@@ -28,24 +28,24 @@ h5 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 17px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
 }
 .paragraph-l {
-  font-family: Arial;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 24px;
   color: $color-dark-xl;
 }
 .paragraph-s {
-  font-family: Arial;
+  font-family: "Arial";
   font-style: italic;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 150%;
   color: $color-dark-m;
 }

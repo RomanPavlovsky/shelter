@@ -1,0 +1,23 @@
+.our-friends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $color-light-l;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 60px;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    width: 400px;
+  }
+
+  &__button {
+    @include button_primary;
+  }
+}

@@ -1,0 +1,32 @@
+.navbar {
+  padding: 16px 0 20px 0;
+  &__list {
+    width: 442px;
+    display: flex;
+    column-gap: 35px;
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &__link_active {
+    cursor: default;
+    align-items: center;
+    color: $color-light-s;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 3px solid $color-primory;
+  }
+  &__link {
+    align-items: center;
+    color: $color-dark-s;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      color: $color-light-s;
+    }
+    &:active {
+      padding-bottom: 3px;
+      border-bottom: 3px solid $color-primory;
+    }
+  }
+}

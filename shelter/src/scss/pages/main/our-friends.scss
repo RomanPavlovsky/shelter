@@ -11,10 +11,16 @@
     justify-content: space-between;
     row-gap: 60px;
     align-items: center;
+    @include mobile_m {
+      row-gap: 42px;
+    }
   }
-  &__title {
+  &__heading {
     text-align: center;
-    width: 400px;
+    max-width: 400px;
+    @include mobile_s {
+      @include h3_mobile;
+    }
   }
 
   &__button {

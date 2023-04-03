@@ -3,71 +3,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .logo {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-    &:hover .logo__title {
-      color: $color-primary-light;
-      transition: $transition;
-    }
-    &__title {
-      margin: 0;
-      font-family: Georgia;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 35px;
-      letter-spacing: 0.06em;
-      color: $color-primory;
-    }
-    &__subtitle {
-      font-family: Arial;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 15px;
-      letter-spacing: 0.1em;
-      color: $color-light-xl;
+  @include mobile_m {
+    @include responsiveMobile(margin-left, 0, 10);
+    @include responsiveMobile(margin-right, 0, 10);
+  }
+  &__navbar {
+    @include mobile_m {
+      display: none;
     }
   }
-
-  .navbar {
-    padding: 16px 0 20px 0;
-    &__list {
-      width: 442px;
-      display: flex;
-      column-gap: 35px;
-    }
-    &__item {
-      list-style-type: none;
-    }
-    &__link_active {
-      align-items: center;
-      color: $color-light-s;
-      text-decoration: none;
-      padding-bottom: 3px;
-      border-bottom: 3px solid $color-primory;
-    }
-    &__link {
-      align-items: center;
-      color: $color-dark-s;
-      text-decoration: none;
-      transition: $transition;
-      &:hover {
-        color: $color-light-s;
-      }
-      &:active {
-        padding-bottom: 3px;
-        border-bottom: 3px solid $color-primory;
-      }
+  &__burger {
+    @include mobile_m {
+      display: block;
     }
   }
 }
+
 @mixin pets-header {
   .logo {
     &:hover .logo__title {
@@ -79,6 +30,17 @@
     }
     &__subtitle {
       color: $color-dark-3xl;
+    }
+  }
+  .burger {
+    &__line {
+      background-color: #000000;
+      &:before {
+        background-color: #000000;
+      }
+      &:after {
+        background-color: #000000;
+      }
     }
   }
   .navbar {

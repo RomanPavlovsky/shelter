@@ -12,6 +12,9 @@
       align-items: center;
       row-gap: 100px;
     }
+    @include mobile_m {
+      row-gap: 105px;
+    }
   }
   &__content {
     max-width: 460px;
@@ -21,6 +24,10 @@
     row-gap: 4.2rem;
     @include tablet {
       @include responsiveTablet(max-width, 720, 460);
+    }
+    @include mobile_m {
+      justify-content: center;
+      @include responsiveMobile(max-width, 460, 300);
     }
   }
   &__background {
@@ -37,9 +44,16 @@
   }
   &__heading {
     color: $color-light-xl;
+    @include mobile_s {
+      @include h3_mobile;
+      align-self: center;
+    }
   }
   &__subheading {
     color: $color-dark-s;
+    @include mobile_s {
+      text-align: center;
+    }
   }
   &__button {
     @include button_primary;

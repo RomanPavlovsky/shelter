@@ -4,6 +4,23 @@
   align-items: center;
   width: 100%;
   background-color: $color-light-l;
+  &__wrapper {
+    max-width: 1280px;
+    width: 100%;
+    padding: 80px 40px 100px 40px;
+    @include desktop {
+      @include responsiveDesktop(padding-top, 80, 60);
+      @include responsiveDesktop(padding-right, 40, 30);
+      @include responsiveDesktop(padding-left, 40, 30);
+      @include responsiveDesktop(padding-bottom, 100, 70);
+    }
+    @include mobile_m {
+      @include responsiveMobile(padding-top, 60, 42);
+      @include responsiveMobile(padding-right, 30, 10);
+      @include responsiveMobile(padding-left, 30, 10);
+      @include responsiveMobile(padding-bottom, 70, 42);
+    }
+  }
   &__container {
     width: 100%;
     display: flex;
@@ -11,12 +28,52 @@
     justify-content: space-between;
     row-gap: 45px;
     align-items: center;
+    @include desktopFull {
+      row-gap: 0;
+    }
+    @include mobile_m {
+      row-gap: 42px;
+    }
   }
   &__title {
     text-align: center;
-    width: 400px;
+    max-width: 400px;
+    @include desktopFull {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    @include mobile_m {
+      margin: 0;
+    }
+    @include mobile_s {
+      @include h3_mobile;
+    }
   }
-
+  .pets__card_fourth {
+    @include mobile_m {
+      display: none;
+    }
+  }
+  .pets__card_fifth {
+    @include mobile_m {
+      display: none;
+    }
+  }
+  .pets__card_sixth {
+    @include mobile_m {
+      display: none;
+    }
+  }
+  &__card_seventh {
+    @include desktopFull {
+      display: none;
+    }
+  }
+  &__card_eighth {
+    @include desktopFull {
+      display: none;
+    }
+  }
   .pagination {
     display: flex;
     justify-content: center;
@@ -35,6 +92,14 @@
     }
     &__next-full {
       @include button_pagination;
+    }
+    @include desktopFull {
+      margin-top: 40px;
+      margin-bottom: 6px;
+    }
+    @include mobile_m {
+      margin: 0;
+      @include responsiveMobile(column-gap, 20, 10);
     }
   }
 }

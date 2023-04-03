@@ -14,6 +14,9 @@
       flex-direction: column-reverse;
       row-gap: 60px;
     }
+    @include mobile_m {
+      row-gap: 42px;
+    }
   }
   &__background__image {
     display: block;
@@ -30,12 +33,25 @@
     @include tablet {
       @include responsiveTablet(max-width, 720, 380);
     }
+    @include mobile_m {
+      align-items: center;
+      @include responsiveMobile(max-width, 380, 281);
+    }
   }
   &__heading {
-    display: flex;
-    margin-right: 80px;
+    @include mobile_s {
+      @include h3_mobile;
+    }
+  }
+  &__subheading {
+    @include mobile_s {
+      line-height: 24px;
+      letter-spacing: 0;
+    }
   }
   .credit-card {
+    cursor: pointer;
+    text-decoration: none;
     padding: 10px 15px;
     border-radius: 9px;
     background-color: $color-primory;
@@ -44,12 +60,23 @@
       background-color: $color-primary-light;
     }
     &__content {
-      text-decoration: none;
       display: flex;
+      align-items: center;
       column-gap: 15px;
+    }
+    &__number {
+      @include mobile_m {
+        @include h5_modal;
+      }
     }
     &__icon {
       display: block;
+    }
+  }
+  &__description {
+    text-align: start;
+    @include mobile_m {
+      text-align: justify;
     }
   }
 }

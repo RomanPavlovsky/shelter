@@ -15,6 +15,9 @@
             <h1 class="logo__title">Cozy House</h1>
             <p class="logo__subtitle">Shelter for pets in Boston</p>
           </a>
+          <div class="header__burger burger">
+            <span class="burger__line"></span>
+          </div>
           <nav class="header__navbar navbar">
             <ul class="navbar__list">
               <li class="navbar__item">
@@ -101,14 +104,17 @@
               </picture>
             </div>
             <div class="about__content">
-              <h3 class="about__title">About the shelter “Cozy House”</h3>
-              <p class="about__description paragraph-l">
+              <h3 class="about__heading">
+                About the shelter <br />
+                “Cozy House”
+              </h3>
+              <p class="about__subheading_first paragraph-l">
                 Currently we have 121 dogs and 342 cats on our hands and
                 statistics show that only 20% of them will find a family. The
                 others will continue to live with us and will be waiting for a
                 lucky chance to become dearly loved.
               </p>
-              <p class="about__description paragraph-l">
+              <p class="about__subheading_second paragraph-l">
                 We feed our wards with the best food and make sure that they do
                 not get sick, feel comfortable (including psychologically) and
                 well. We are supported by 87 volunteers and 28 employees of
@@ -123,40 +129,43 @@
       <section class="our-friends" id="our-friends">
         <div class="our-friends__wrapper wrapper">
           <div class="our-friends__container">
-            <h3 class="our-friends__title">
+            <h3 class="our-friends__heading">
               Our friends who <br />
               are looking for a house
             </h3>
             <div class="our-friends__slider slider">
-              <span class="slider__button_prev button"></span>
-              <span class="slider__button_next button"></span>
-
-              <div class="slider__card_one card">
-                <img
-                  class="card__image"
-                  src="../assets/images/pets-katrine.png"
-                  alt="cat Katrine"
-                />
-                <h4 class="card__name">Katrine</h4>
-                <button class="card__button button">Learn more</button>
+              <div class="slider__buttons">
+                <span class="slider__button_prev button"></span>
+                <span class="slider__button_next button"></span>
               </div>
-              <div class="slider__card_two card">
-                <img
-                  class="card__image"
-                  src="../assets/images/pets-jennifer.png"
-                  alt="dog Jennifer"
-                />
-                <h4 class="card__name">Jennifer</h4>
-                <button class="card__button button">Learn more</button>
-              </div>
-              <div class="slider__card_three card">
-                <img
-                  class="card__image"
-                  src="../assets/images/pets-woody.png"
-                  alt="dog Woody"
-                />
-                <h4 class="card__name">Woody</h4>
-                <button class="card__button button">Learn more</button>
+              <div class="slider__content">
+                <div class="slider__card_first card">
+                  <img
+                    class="card__image"
+                    src="../assets/images/pets-katrine.png"
+                    alt="cat Katrine"
+                  />
+                  <h4 class="card__name">Katrine</h4>
+                  <button class="card__button button">Learn more</button>
+                </div>
+                <div class="slider__card_second card">
+                  <img
+                    class="card__image"
+                    src="../assets/images/pets-jennifer.png"
+                    alt="dog Jennifer"
+                  />
+                  <h4 class="card__name">Jennifer</h4>
+                  <button class="card__button button">Learn more</button>
+                </div>
+                <div class="slider__card_third card">
+                  <img
+                    class="card__image"
+                    src="../assets/images/pets-woody.png"
+                    alt="dog Woody"
+                  />
+                  <h4 class="card__name">Woody</h4>
+                  <button class="card__button button">Learn more</button>
+                </div>
               </div>
             </div>
             <a class="our-friends__button button" href="./pets.html"
@@ -175,72 +184,84 @@
 
             <div class="help__list">
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img src="../assets/icons/icon-pet-food.svg" alt="pet-food" />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-pet-food.svg"
+                  alt="pet-food"
+                />
+
                 <h4 class="list-item__name">Pet food</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img
-                    src="../assets/icons/icon-transportation.svg"
-                    alt="transportation"
-                  />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-transportation.svg"
+                  alt="transportation"
+                />
+
                 <h4 class="list-item__name">Transportation</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img src="../assets/icons/icon-toys.svg" alt="toys" />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-toys.svg"
+                  alt="toys"
+                />
+
                 <h4 class="list-item__name">Toys</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img
-                    src="../assets/icons/icon-bowls-and-cups.svg"
-                    alt="bowls and cups"
-                  />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-bowls-and-cups.svg"
+                  alt="bowls and cups"
+                />
+
                 <h4 class="list-item__name">Bowls and cups</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img src="../assets/icons/icon-shampoos.svg" alt="shampoos" />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-shampoos.svg"
+                  alt="shampoos"
+                />
+
                 <h4 class="list-item__name">Shampoos</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img src="../assets/icons/icon-vitamins.svg" alt="vitamins" />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-vitamins.svg"
+                  alt="vitamins"
+                />
+
                 <h4 class="list-item__name">Vitamins</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img
-                    src="../assets/icons/icon-medicines.svg"
-                    alt="medicines"
-                  />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-medicines.svg"
+                  alt="medicines"
+                />
+
                 <h4 class="list-item__name">Medicines</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img
-                    src="../assets/icons/icon-collars-leashes.svg"
-                    alt="collars / leashes"
-                  />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-collars-leashes.svg"
+                  alt="collars / leashes"
+                />
+
                 <h4 class="list-item__name">Collars / leashes</h4>
               </div>
               <div class="help__list-item list-item">
-                <div class="list-item__image">
-                  <img
-                    src="../assets/icons/icon-sleeping-area.svg"
-                    alt="sleeping areas"
-                  />
-                </div>
+                <img
+                  class="list-item__icon"
+                  src="../assets/icons/icon-sleeping-area.svg"
+                  alt="sleeping areas"
+                />
+
                 <h4 class="list-item__name">Sleeping areas</h4>
               </div>
             </div>
@@ -268,16 +289,19 @@
               </picture>
             </div>
             <div class="in-adition__content">
-              <h3 class="in-adition__heading">You can also make a donation</h3>
+              <h3 class="in-adition__heading">
+                You can also <br />
+                make a donation
+              </h3>
               <h5 class="in-adition__subheading">
                 Name of the bank / Type of bank account
               </h5>
-              <div class="in-adition__credit-card credit-card">
-                <a href="" class="credit-card__content">
+              <a class="in-adition__credit-card credit-card">
+                <div href="" class="credit-card__content">
                   <img src="../assets/icons/credit-card.svg" alt="card" />
                   <h4 class="credit-card__number">8380 2880 8028 8791 7435</h4>
-                </a>
-              </div>
+                </div>
+              </a>
               <p class="in-adition__description paragraph-s">
                 Legal information and lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
@@ -297,6 +321,10 @@
               <h3 class="contacts__heading">
                 For questions <br />
                 and suggestions
+              </h3>
+              <h3 class="contacts__heading_mobile">
+                For questions and<br />
+                suggestions
               </h3>
               <a class="contacts__mail" href="mailto:email@shelter.com">
                 <img
@@ -319,6 +347,10 @@
               <h3 class="location__heading">
                 We are waiting <br />
                 for your visit
+              </h3>
+              <h3 class="location__heading_mobile">
+                We are waiting for <br />
+                your visit
               </h3>
               <a
                 class="location__boston"

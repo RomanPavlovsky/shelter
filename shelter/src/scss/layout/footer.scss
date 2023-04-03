@@ -15,22 +15,38 @@
       @include responsiveTablet(padding-right, 40, 30);
       @include responsiveTablet(padding-top, 40, 30);
     }
+    @include mobile_m {
+      padding-top: 30px;
+      @include responsiveMobile(padding-left, 30, 10);
+      @include responsiveMobile(padding-right, 30, 10);
+    }
   }
   &__container {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     @include desktop {
       flex-direction: column;
+      align-items: center;
       row-gap: 65px;
+    }
+    @include mobile_m {
+      row-gap: 40px;
     }
   }
   &__content {
     display: flex;
     column-gap: 160px;
+    margin-bottom: 60px;
     @include tablet {
       @include responsiveTablet(column-gap, 160, 60);
+      margin-bottom: 0px;
+    }
+    @include mobile_m {
+      flex-direction: column;
+      row-gap: 40px;
+      max-width: 300px;
     }
   }
   &__background-image {
@@ -45,6 +61,17 @@
 
     &__heading {
       color: $color-light-xl;
+      @include mobile_m {
+        display: none;
+      }
+    }
+    &__heading_mobile {
+      color: $color-light-xl;
+      display: none;
+      @include mobile_m {
+        @include h3_mobile;
+        display: block;
+      }
     }
     &__mail {
       text-decoration: none;
@@ -53,6 +80,9 @@
       &:hover .contacts__email-address {
         color: $color-primary-light;
         transition: $transition;
+      }
+      @include mobile_m {
+        justify-content: center;
       }
     }
     &__email-address {
@@ -69,6 +99,9 @@
         color: $color-primary-light;
         transition: $transition;
       }
+      @include mobile_m {
+        justify-content: center;
+      }
     }
     &__phone-number {
       display: flex;
@@ -78,17 +111,35 @@
     }
   }
   .location {
+    width: 302px;
     display: flex;
     flex-direction: column;
+    row-gap: 33px;
+    @include mobile_m {
+      row-gap: 40px;
+      width: 300px;
+    }
 
     &__heading {
       color: $color-light-xl;
+      @include mobile_m {
+        display: none;
+      }
+    }
+    &__heading_mobile {
+      color: $color-light-xl;
+      display: none;
+      @include mobile_m {
+        @include h3_mobile;
+        display: block;
+      }
     }
     &__boston {
+      width: 100%;
       text-decoration: none;
-      margin-top: 34px;
       display: flex;
       column-gap: 20px;
+      justify-content: space-between;
       &:hover .location__boston-address {
         color: $color-primary-light;
         transition: $transition;
@@ -100,12 +151,15 @@
       justify-content: flex-start;
       align-items: center;
       color: $color-primory;
+      @include mobile_m {
+        width: 258px;
+      }
     }
     &__london {
       text-decoration: none;
-      margin-top: 32px;
       display: flex;
       column-gap: 20px;
+      justify-content: space-between;
       &:hover .location__london-address {
         color: $color-primary-light;
         transition: $transition;
@@ -117,6 +171,9 @@
       justify-content: flex-start;
       align-items: center;
       color: $color-primory;
+      @include mobile_m {
+        width: 258px;
+      }
     }
   }
 }

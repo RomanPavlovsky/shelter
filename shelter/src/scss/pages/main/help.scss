@@ -6,6 +6,9 @@
   background-color: $color-light-xl;
   &__heading {
     text-align: center;
+    @include mobile_s {
+      @include h3_mobile;
+    }
   }
   &__container {
     width: 100%;
@@ -13,6 +16,9 @@
     flex-direction: column;
     align-items: center;
     row-gap: 60px;
+    @include mobile_m {
+      row-gap: 42px;
+    }
   }
   &__list {
     display: flex;
@@ -24,10 +30,12 @@
     @include desktop {
       @include responsiveDesktop(column-gap, 120, 60);
     }
-  }
-  &__list-item {
-    @include tablet {
-      width: 170px;
+    @include mobile_m {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      @include responsiveMobile(row-gap, 55, 30);
+      @include responsiveMobile(column-gap, 60, 30);
     }
   }
 }

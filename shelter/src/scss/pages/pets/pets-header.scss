@@ -6,8 +6,17 @@
   width: 100%;
 }
 .pets-header__wrapper {
-  min-width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   padding: 30px 40px;
+  @include desktop {
+    @include responsiveDesktop(padding-left, 40, 30);
+    @include responsiveDesktop(padding-right, 40, 30);
+  }
+  @include mobile_m {
+    @include responsiveMobile(padding-left, 30, 10);
+    @include responsiveMobile(padding-right, 30, 10);
+  }
 }
 .pets-header__container {
   @include pets-header;

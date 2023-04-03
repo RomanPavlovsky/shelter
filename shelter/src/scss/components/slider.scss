@@ -3,26 +3,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   width: 100%;
-  column-gap: 90px;
-  @include desktop {
-    @include responsiveDesktop(column-gap, 90, 40);
+  @include mobile_s {
+    flex-direction: column-reverse;
+    row-gap: 20px;
   }
 
-  &__card_three {
+  &__content {
+    display: flex;
+    max-width: 990px;
+    width: 100%;
+    justify-content: space-between;
+    @include desktop {
+      max-width: 720px;
+    }
+    @include tablet {
+      @include responsiveTablet(max-width, 720, 580);
+    }
+    @include mobile_m {
+      justify-content: center;
+    }
+  }
+  &__card_second {
+    @include mobile_m {
+      display: none;
+    }
+  }
+  &__card_third {
     @include desktop {
       display: none;
     }
   }
-
-  &__button_prev {
+  &__buttons {
     position: absolute;
-    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include mobile_s {
+      position: relative;
+      justify-content: center;
+      column-gap: 80px;
+    }
+  }
+  &__button_prev {
     @include button_arrow;
   }
   &__button_next {
-    position: absolute;
-    right: 0;
     @include button_arrow;
     transform: rotate(180deg);
     order: 5;

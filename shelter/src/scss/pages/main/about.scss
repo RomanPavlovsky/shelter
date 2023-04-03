@@ -15,6 +15,9 @@
       flex-direction: column-reverse;
       row-gap: 80px;
     }
+    @include mobile_m {
+      row-gap: 42px;
+    }
   }
   &__background-image {
     display: block;
@@ -26,11 +29,28 @@
     @include tablet {
       @include responsiveTablet(max-width, 720, 430);
     }
+    @include mobile_m {
+      justify-content: center;
+      @include responsiveMobile(max-width, 430, 270);
+    }
   }
-  &__title {
-    width: 370px;
+  &__heading {
+    @include mobile_s {
+      @include h3_mobile;
+      align-self: center;
+    }
   }
-  &__description {
+  &__subheading_first {
     margin-top: 25px;
+    @include mobile_s {
+      text-align: justify;
+    }
+  }
+  &__subheading_second {
+    margin-top: 25px;
+    @include mobile_s {
+      margin-top: 22px;
+      text-align: justify;
+    }
   }
 }

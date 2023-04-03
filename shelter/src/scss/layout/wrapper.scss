@@ -6,4 +6,10 @@
     @include responsiveTablet(padding-left, 40, 30);
     @include responsiveTablet(padding-right, 40, 30);
   }
+  @include mobile_m {
+    @include responsiveMobile(padding-left, 30, 10);
+    @include responsiveMobile(padding-right, 30, 10);
+    @include responsiveMobile(padding-top, 80, 42);
+    @include responsiveMobile(padding-bottom, 100, 42);
+  }
 }

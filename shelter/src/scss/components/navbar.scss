@@ -7,13 +7,15 @@
   }
   &__item {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__link_active {
     cursor: default;
     align-items: center;
     color: $color-light-s;
     text-decoration: none;
-    padding-bottom: 3px;
     border-bottom: 3px solid $color-primory;
   }
   &__link {
@@ -27,6 +29,72 @@
     &:active {
       padding-bottom: 3px;
       border-bottom: 3px solid $color-primory;
+    }
+  }
+}
+@mixin pets-navbar {
+  .navbar {
+    padding: 0;
+    &__link {
+      color: $color-dark-l;
+      &:hover {
+        color: $color-dark-3xl;
+      }
+    }
+    &__link_active {
+      color: $color-dark-3xl;
+    }
+  }
+}
+@mixin modal-navbar {
+  .navbar {
+    opacity: 0;
+    &__list {
+      width: 243px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 40px;
+    }
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__link_active {
+      padding-top: 6px;
+      border-bottom: 3px solid $color-primory;
+    }
+    &__link {
+      @include paragraph-mobile-menu;
+    }
+    &__link_active {
+      @include paragraph-mobile-menu;
+    }
+    &_visible {
+      animation: visible 0.5s linear 1;
+      animation-fill-mode: both;
+      @keyframes visible {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+    &_hidden {
+      animation: hidden 0.3s linear 1;
+      animation-fill-mode: both;
+      @keyframes hidden {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
     }
   }
 }

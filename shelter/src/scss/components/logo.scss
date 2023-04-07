@@ -29,3 +29,17 @@
     color: $color-light-xl;
   }
 }
+@mixin pets-logo() {
+  .logo {
+    &:hover .logo__title {
+      color: $color-dark-3xl;
+      transition: $transition;
+    }
+    &__title {
+      color: $color-dark-l;
+    }
+    &__subtitle {
+      color: $color-dark-3xl;
+    }
+  }
+}

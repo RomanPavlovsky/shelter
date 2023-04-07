@@ -66,3 +66,10 @@ h5 {
   line-height: 150%;
   color: $color-dark-m;
 }
+@mixin paragraph-mobile-menu {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+}

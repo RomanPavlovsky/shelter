@@ -310,7 +310,9 @@ const slider = () => {
 
   slidePrev.addEventListener("click", usePrev);
   slideNext.addEventListener("click", useNext);
-  const parent = document.querySelector(".somediv");
 };
-slider();
+
+if (sliderContent !== null) {
+  slider();
+}
 export default slider;

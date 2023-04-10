@@ -11,6 +11,9 @@ module.exports = {
     assetModuleFilename: "assets/[hash][ext][query]",
     clean: false,
   },
+  resolve: {
+    extensions: [".js", ".json"],
+  },
 
   plugins: [
     new HtmlWebpackPlugin({
@@ -55,6 +58,10 @@ module.exports = {
           "postcss-loader",
           "sass-loader",
         ],
+      },
+      {
+        test: /\.json$/,
+        type: "json",
       },
       {
         test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,

@@ -5,34 +5,113 @@
   align-items: center;
   max-width: 100%;
   width: 100%;
+  min-height: 435px;
   @include mobile_s {
     flex-direction: column-reverse;
     row-gap: 20px;
   }
-
-  &__content {
+  &__container {
+    position: relative;
     display: flex;
+    justify-content: center;
+    overflow: hidden;
     max-width: 990px;
     width: 100%;
-    justify-content: space-between;
+    height: 435px;
     @include desktop {
-      max-width: 720px;
-    }
-    @include tablet {
-      @include responsiveTablet(max-width, 720, 580);
+      max-width: 580px;
+      width: 100%;
     }
     @include mobile_m {
-      justify-content: center;
+      max-width: 270px;
+      width: 100%;
     }
   }
-  &__card_second {
-    @include mobile_m {
-      display: none;
-    }
-  }
-  &__card_third {
+  &__content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    column-gap: 90px;
+    width: 2070px;
     @include desktop {
-      display: none;
+      width: 1200px;
+      column-gap: 40px;
+    }
+    @include mobile_m {
+      width: 580px;
+      column-gap: 40px;
+    }
+  }
+  &__content_prev {
+    animation: contentPrev 0.7s ease-in 1;
+    animation-fill-mode: both;
+    @keyframes contentPrev {
+      from {
+        left: -1080px;
+      }
+
+      to {
+        left: 0px;
+      }
+    }
+    @include desktop {
+      @keyframes contentPrev {
+        from {
+          left: -620px;
+        }
+
+        to {
+          left: 0px;
+        }
+      }
+    }
+    @include mobile_m {
+      animation: contentPrev 0.7s ease-in 1;
+      @keyframes contentPrev {
+        from {
+          left: -310px;
+        }
+
+        to {
+          left: 0px;
+        }
+      }
+    }
+  }
+  &__content_next {
+    animation: contentNext 0.7s ease-in 1;
+    animation-fill-mode: both;
+    @keyframes contentNext {
+      from {
+        left: 0;
+      }
+
+      to {
+        left: -1080px;
+      }
+    }
+    @include desktop {
+      @keyframes contentNext {
+        from {
+          left: 0;
+        }
+
+        to {
+          left: -620px;
+        }
+      }
+    }
+    @include mobile_m {
+      animation: contentNext 0.7s ease-in 1;
+      @keyframes contentNext {
+        from {
+          left: 0;
+        }
+
+        to {
+          left: -310px;
+        }
+      }
     }
   }
   &__buttons {
@@ -53,5 +132,9 @@
     @include button_arrow;
     transform: rotate(180deg);
     order: 5;
+  }
+  .slider__card {
+    position: relative;
+    z-index: 1;
   }
 }

@@ -9,7 +9,7 @@ const nextFull = document.querySelector(".pagination__next-full");
 let currentPage = 1;
 const randomArr = [];
 let resultArr = [];
-const maxMediaTablet = window.matchMedia("(max-width: 1280px)");
+const maxMediaTablet = window.matchMedia("(max-width: 1279px)");
 const minMediaTablet = window.matchMedia("(min-width: 768px)");
 const mediaMobile = window.matchMedia("(max-width: 767px)");
 

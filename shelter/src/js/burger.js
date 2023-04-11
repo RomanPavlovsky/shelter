@@ -6,7 +6,6 @@ const modalNavbar = document.querySelector(".navbar");
 let isActive = false;
 const spinBurger = (event) => {
   burger.removeEventListener("click", spinBurger);
-  console.log(event.target);
   if (isActive === false) {
     modal.addEventListener("click", spinBurger);
     burger.classList.add("burger_active");
@@ -16,7 +15,6 @@ const spinBurger = (event) => {
     modalNavbar.classList.add("navbar_visible");
     document.querySelector("body").style.overflow = "hidden";
     isActive = true;
-    console.log("open");
   } else if (
     event.target.closest(".burger") ||
     event.target.closest(".burger-modal__dark-theme") ||
@@ -36,7 +34,6 @@ const spinBurger = (event) => {
     setTimeout(() => {
       modal.style.display = "none";
     }, 300);
-    console.log("close");
   }
   setTimeout(() => {
     burger.addEventListener("click", spinBurger);

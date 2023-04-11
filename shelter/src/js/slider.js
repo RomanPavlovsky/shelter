@@ -19,10 +19,10 @@ const slider = () => {
   };
   getIdCards();
   const addCard = (id) => {
-    return `<div class="slider__card card ">
+    return `<div class="slider__card card" data-index="${id}">
     <img class="card__image" src="${dataPets[id].img}" />
     <h4 class="card__name">${dataPets[id].name}</h4>
-    <button data-index=${id} class="card__button button">Learn more</button>
+    <button class="card__button button">Learn more</button>
     </div>`;
   };
   const getMobileId = () => {

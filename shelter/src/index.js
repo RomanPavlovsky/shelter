@@ -1,7 +1,7 @@
 import "./scss/main.scss";
 import burgerMenu from "./js/burger";
 import slider from "./js/slider";
-// import pagination from "./js/pagination";
+import pagination from "./js/pagination";
 
 // import "./assets/images/pets-jennifer.png";
 // console.log(
@@ -14,5 +14,5 @@ const question = confirm(
 if (question === true) {
   alert("Большое спасибо!!;)");
 } else {
-  alert("как же я задолбался с пагинацией... надеюсь сегодня доделаю");
+  alert("сегодня доделаю, спасибо за понимание");
 }

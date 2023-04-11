@@ -66,6 +66,7 @@
     border: 2px solid $color-dark-s;
     cursor: default;
     &:hover {
+      border: 2px solid $color-dark-s;
       background-color: transparent;
     }
   }

@@ -1,4 +1,5 @@
 .grid {
+  overflow: hidden;
   padding: 15px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -21,5 +22,21 @@
   @include mobile_m {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__card {
+    animation: renderCard 0.3s ease-in 1;
+    animation-fill-mode: both;
+    @keyframes renderCard {
+      from {
+        opacity: 0.9;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }

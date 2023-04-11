@@ -49,31 +49,7 @@
       @include h3_mobile;
     }
   }
-  .pets__card_fourth {
-    @include mobile_m {
-      display: none;
-    }
-  }
-  .pets__card_fifth {
-    @include mobile_m {
-      display: none;
-    }
-  }
-  .pets__card_sixth {
-    @include mobile_m {
-      display: none;
-    }
-  }
-  &__card_seventh {
-    @include desktopFull {
-      display: none;
-    }
-  }
-  &__card_eighth {
-    @include desktopFull {
-      display: none;
-    }
-  }
+
   .pagination {
     display: flex;
     justify-content: center;

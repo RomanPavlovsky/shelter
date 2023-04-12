@@ -48,6 +48,7 @@
 }
 @mixin modal-navbar {
   .navbar {
+    padding: 0;
     opacity: 0;
     &__list {
       width: 243px;
@@ -63,7 +64,6 @@
       align-items: center;
     }
     &__link_active {
-      padding-top: 6px;
       border-bottom: 3px solid $color-primory;
     }
     &__link {
